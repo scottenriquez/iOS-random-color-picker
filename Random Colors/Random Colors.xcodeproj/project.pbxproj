@@ -14,6 +14,7 @@
 		D857522524B2906000DB959B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D857522324B2906000DB959B /* LaunchScreen.storyboard */; };
 		D857522D24B2920400DB959B /* ColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D857522C24B2920400DB959B /* ColorsTableViewController.swift */; };
 		D857522F24B293E600DB959B /* ColorsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D857522E24B293E600DB959B /* ColorsDetailViewController.swift */; };
+		D859EA0524B3880700351E07 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D859EA0424B3880700351E07 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D857522624B2906000DB959B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D857522C24B2920400DB959B /* ColorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewController.swift; sourceTree = "<group>"; };
 		D857522E24B293E600DB959B /* ColorsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDetailViewController.swift; sourceTree = "<group>"; };
+		D859EA0424B3880700351E07 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D857522124B2906000DB959B /* Assets.xcassets */,
 				D857522324B2906000DB959B /* LaunchScreen.storyboard */,
 				D857522624B2906000DB959B /* Info.plist */,
+				D859EA0424B3880700351E07 /* UIColorExtensions.swift */,
 			);
 			path = "Random Colors";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				D857521B24B2905F00DB959B /* SceneDelegate.swift in Sources */,
 				D857522F24B293E600DB959B /* ColorsDetailViewController.swift in Sources */,
 				D857522D24B2920400DB959B /* ColorsTableViewController.swift in Sources */,
+				D859EA0524B3880700351E07 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

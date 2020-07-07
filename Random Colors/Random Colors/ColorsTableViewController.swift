@@ -9,25 +9,52 @@
 import UIKit
 
 class ColorsTableViewController: UIViewController {
+    
+    let numberOfRows = 50
+    var randomColors: [UIColor] = []
+    
+    enum Cells {
+        static let uiColorCell = "UIColorCell"
+    }
+    
+    enum Segues {
+        static let toDetailViewController = "ToColorDetailViewController"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        populateRandomColorsArray()
     }
     
-    @IBAction func tempButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "ToColorDetailsViewController", sender: nil)
+    func populateRandomColorsArray() {
+        for _ in 0..<numberOfRows {
+            randomColors.append(.random())
+        }
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destinationViewController = segue.destination as! ColorsDetailViewController
+        destinationViewController.backgroundColor = sender as? UIColor  
     }
-    */
+    
+}
 
+extension ColorsTableViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return randomColors.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.uiColorCell) else {
+            return UITableViewCell()
+        }
+        cell.backgroundColor = randomColors[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Segues.toDetailViewController, sender: randomColors[indexPath.row])
+    }
 }
